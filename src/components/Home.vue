@@ -1,7 +1,11 @@
 <script>
 import { defineComponent } from 'vue';
+import NavBar from './NavBar.vue'
 
 export default defineComponent({
+    components:{
+        NavBar
+    },
     mounted(){
         let user = localStorage.getItem("user-info")
         if(!user){
@@ -11,5 +15,5 @@ export default defineComponent({
 })
 </script>
 <template>
-    This ishome
+    <NavBar />
 </template>
