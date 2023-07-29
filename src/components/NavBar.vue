@@ -1,7 +1,11 @@
 <script>
 import { defineComponent } from 'vue';
+import Department from './Department.vue';
 
 export default defineComponent({
+    components: {
+        Department
+    },
     data(){
         return{
             headers: [
@@ -13,7 +17,9 @@ export default defineComponent({
             country: 'NG / N',
             currency: 'NGN',
             showCurrency: false,
-            showUsefulLink: false
+            showUsefulLink: false,
+            imageOne: '/../assets/women-attire.jpg',
+            imageTwo: '/../assets/shoes-attire.jpg',
         }
     },
     methods: {
@@ -208,6 +214,27 @@ export default defineComponent({
                 </div> 
             </div>
         </div>
+        <div class="flex px-[4rem] gap-6 bg-white max-[963px]:px-[1rem] w-full py-3 max-[878px]:hidden">
+            <div class="relative flex items-center gap-2 border-r pr-5 cursor-pointer">
+                <svg class="text-gray-400" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
+                <p class="text-gray-600">Departments</p>
+                <svg class="text-[#B9BCC2]" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+                <div class="absolute shadow-xl bottom-[-18rem] bg-white p-6 w-[700px] gap-6 grid grid-cols-3">
+                    <Department heading="Clothing" typeOne="Women's clothing" typeTwo="Men's clothing" :imageOne="imageOne"/>
+                    <Department heading="Shoes" typeOne="Women's shoes" typeTwo="Men's shoes" :imageTwo="imageTwo"/>
+                    <Department heading="Gadgets" typeOne="Smartphones & Tablets" typeTwo="Wearable Gadgets" :imageOne="imageOne"/>
+                </div>
+                
+            </div>
+            <div class="flex items-center gap-6 text-gray-500">
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Home</p>
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Shop</p>
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Account</p>
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Pages</p>
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Blog</p>
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Dos / Components</p>
+            </div>
+        </div>
     </div>
 </template>
 <style scoped>
@@ -220,7 +247,10 @@ export default defineComponent({
 .body-cart{
     display:none;
 }
-.cart-number:hover .body-cart{
-    display: block;
+
+@media screen and (min-width: 878px){
+    .cart-number:hover .body-cart{
+        display: block;
+    }
 }
 </style>
