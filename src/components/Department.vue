@@ -6,15 +6,14 @@ export default defineComponent({
         'heading',
         'typeOne',
         'typeTwo',
-        'imageOne',
-        'imageTwo'
+        'depImg'
     ]
 })
 </script>
 <template>
     <div>
         <div class="mb-3">
-            <img src="../assets/women-attire.jpg" class="rounded-md" alt="">
+            <img :src="depImg" class="rounded-md" alt="">
         </div>
         <p class="text-[#373F50] mb-3 font-semibold">{{ heading }}</p>
         <div class="text-sm flex flex-col gap-1 text-gray-500">

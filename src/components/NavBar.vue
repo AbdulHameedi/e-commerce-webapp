@@ -18,8 +18,10 @@ export default defineComponent({
             currency: 'NGN',
             showCurrency: false,
             showUsefulLink: false,
-            imageOne: '/../assets/women-attire.jpg',
-            imageTwo: '/../assets/shoes-attire.jpg',
+            depImage: '/../src/assets/women-attire.jpg',
+            depImageTwo: '/../src/assets/shoes-attire.jpg',
+            depImageThree: '/../src/assets/gadgets.jpg'
+
         }
     },
     methods: {
@@ -122,7 +124,7 @@ export default defineComponent({
                 </div>
             </div> 
         </div>
-        <div class="flex w-full items-center justify-between gap-8 px-[4rem] bg-white py-4 max-[963px]:px-[1rem]">
+        <div class="flex w-full items-center justify-between gap-8 px-[4rem] bg-white py-4 max-[963px]:px-[1rem] max-[878px]:mb-2">
             <div class="flex items-center gap-8">
                 <div>
                     <img class="w-[150px]" src="../assets/logo.png" alt="logo">
@@ -216,13 +218,15 @@ export default defineComponent({
         </div>
         <div class="flex px-[4rem] gap-6 bg-white max-[963px]:px-[1rem] w-full py-3 max-[878px]:hidden">
             <div class="relative flex items-center gap-2 border-r pr-5 cursor-pointer">
-                <svg class="text-gray-400" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
-                <p class="text-gray-600">Departments</p>
-                <svg class="text-[#B9BCC2]" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
-                <div class="absolute shadow-xl bottom-[-18rem] bg-white p-6 w-[700px] gap-6 grid grid-cols-3">
-                    <Department heading="Clothing" typeOne="Women's clothing" typeTwo="Men's clothing" :imageOne="imageOne"/>
-                    <Department heading="Shoes" typeOne="Women's shoes" typeTwo="Men's shoes" :imageTwo="imageTwo"/>
-                    <Department heading="Gadgets" typeOne="Smartphones & Tablets" typeTwo="Wearable Gadgets" :imageOne="imageOne"/>
+                <div class="department-menu flex items-center gap-2 text-gray-500 transition duration-500 hover:text-[#FE696A]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
+                    <p>Departments</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+                    <div class="departments absolute shadow-xl bottom-[-18rem] bg-white p-6 w-[700px] gap-6 grid grid-cols-3">
+                        <Department heading="Clothing" :depImg="depImage" typeOne="Women's clothing" typeTwo="Men's clothing" />
+                        <Department heading="Shoes" :depImg="depImageTwo" typeOne="Women's shoes" typeTwo="Men's shoes" />
+                        <Department heading="Gadgets" :depImg="depImageThree" typeOne="Smartphones & Tablets" typeTwo="Wearable Gadgets" />
+                    </div>
                 </div>
                 
             </div>
@@ -235,13 +239,43 @@ export default defineComponent({
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Dos / Components</p>
             </div>
         </div>
+        <div class="bg-white hidden max-[878px]:flex flex-col gap-4 items-center px-[1rem] w-full">
+            <div class="w-full relative">
+                <svg class="absolute left-[9px] top-[15px] text-gray-500" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16Zm0-2q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg>
+                <input type="search" placeholder="Search for products" class="p-3 px-9 w-full border outline-none rounded-md focus:border-[#FE696A] focus:shadow-md">
+            </div>
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3 gap-1">
+                <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
+                <p class="font-semibold">Departments</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            </div>
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+                <p class="font-semibold">Home</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            </div>
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+                <p class="font-semibold">Account</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            </div>
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+                <p class="font-semibold">Blog</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            </div>
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+                <p class="font-semibold">Doscs/Component</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            </div>
+        </div>
     </div>
 </template>
 <style scoped>
-.cancel-cart{
+.cancel-cart , .departments{
     display: none;
 }
 .cart:hover .cancel-cart{
+    display: flex;
+}
+.department-menu:hover .departments{
     display: flex;
 }
 .body-cart{
