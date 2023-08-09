@@ -1,9 +1,9 @@
 import {defineStore} from 'pinia'
 
-export default function useChatStore() {
-    return defineStore('chats' , {
+export default function useProductStore() {
+    return defineStore('products' , {
         state: ()=> ({
-          
+          responsiveMenu: false
         })
     })()
 }
