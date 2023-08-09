@@ -1,6 +1,7 @@
 <script>
 import { defineComponent } from 'vue';
 import Department from './Department.vue';
+import useProductStore from '../stores/store'
 
 export default defineComponent({
     components: {
@@ -20,7 +21,12 @@ export default defineComponent({
             showUsefulLink: false,
             depImage: '/../src/assets/women-attire.jpg',
             depImageTwo: '/../src/assets/shoes-attire.jpg',
-            depImageThree: '/../src/assets/gadgets.jpg'
+            depImageThree: '/../src/assets/gadgets.jpg',
+            responsiveMenu: useProductStore().$state.responsiveMenu,
+            responsiveDepartment: false,
+            responsiveAccount: false,
+            responsiveSubAccount: false,
+            responsiveVendor: false
 
         }
     },
@@ -127,7 +133,8 @@ export default defineComponent({
         <div class="flex w-full items-center justify-between gap-8 px-[4rem] bg-white py-4 max-[963px]:px-[1rem] max-[878px]:mb-2">
             <div class="flex items-center gap-8">
                 <div>
-                    <img class="w-[150px]" src="../assets/logo.png" alt="logo">
+                    <img class="w-[150px] hidden min-[554px]:block" src="../assets/logo.png" alt="logo">
+                    <img class="w-[80px] hidden max-[553px]:block" src="../assets/logo2.png" alt="logo">
                 </div>
                 <div class="w-[670px] max-[1153px]:w-[400px] relative max-[878px]:hidden">
                     <input type="search" placeholder="Search for products" class="p-3 w-full border outline-none rounded-md focus:border-[#FE696A] focus:shadow-md">
@@ -135,7 +142,7 @@ export default defineComponent({
                 </div>
             </div>
             <div class="flex items-center gap-6">
-                <div class="hidden max-[878px]:block">
+                <div class="hidden max-[878px]:block" @click="responsiveMenu = !responsiveMenu">
                     <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75ZM0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8Zm.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H.75Z" clip-rule="evenodd"/></svg>
                 </div>
                 <div class="max-[878px]:hidden">
@@ -233,49 +240,129 @@ export default defineComponent({
             <div class="flex items-center gap-6 text-gray-500">
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Home</p>
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Shop</p>
-                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Account</p>
+                <div class="relative cursor-pointer">
+                    <div class="account-menu">
+                        <span class="transition duration-300 hover:text-[#FE696A]">Account</span>
+                        <div class="accounts absolute bottom-[-9rem] flex flex-col gap-2 p-4 px-5  bg-white w-[220px] shadow-md">
+                            <div class="relative shop-user-account-menu">
+                                <div class="flex items-center justify-between hover:text-[#FE696A] transition duration-300">
+                                    <p class="text-sm">Shop User Account</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m10 17l5-5l-5-5v10z"/></svg>
+                                </div>
+                                <div class="shop-user-account absolute right-[-12rem] bottom-[-11rem] w-[195px] bg-white flex flex-col z-20 gap-2 text-sm shadow-xl p-4 px-5 rounded-md">
+                                    <p class="hover:text-[#FE696A] transition duration-300">Orders History</p>
+                                    <p class="hover:text-[#FE696A] transition duration-300">Profile Settings</p>
+                                    <p class="hover:text-[#FE696A] transition duration-300">Account Addresses</p>
+                                    <p class="hover:text-[#FE696A] transition duration-300">Payment Methods</p>
+                                    <p class="hover:text-[#FE696A] transition duration-300">Wishlist</p>
+                                    <p class="hover:text-[#FE696A] transition duration-300">My Tickects</p>
+                                    <p class="hover:text-[#FE696A] transition duration-300">Single Ticket</p>
+                                </div>
+                            </div>
+                            <div class="relative vendor-menu">
+                                <div class="flex items-center justify-between transition duration-300 hover:text-[#FE696A]">
+                                    <p class="text-sm">Vendor Dashboard</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m10 17l5-5l-5-5v10z"/></svg>
+                                </div>
+                                    <div class="vendor absolute w-[195px] right-[-12rem] top-[-1rem] bg-white flex flex-col z-20 gap-2 text-sm shadow-xl p-4 px-5 rounded-md">
+                                        <p class="hover:text-[#FE696A] transition duration-300">Settings</p>
+                                        <p class="hover:text-[#FE696A] transition duration-300">Purchases</p>
+                                        <p class="hover:text-[#FE696A] transition duration-300">Favourites</p>
+                                        <p class="hover:text-[#FE696A] transition duration-300">Sales</p>
+                                        <p class="hover:text-[#FE696A] transition duration-300">Products</p>
+                                        <p class="hover:text-[#FE696A] transition duration-300">Add new product</p>
+                                        <p class="hover:text-[#FE696A] transition duration-300">Payouts</p>
+                                    </div>
+                            </div>
+                            <div class="flex items-center justify-between transition duration-300 hover:text-[#FE696A]">
+                                <p class="text-sm">Logout</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m10 17l5-5l-5-5v10z"/></svg>
+                            </div>
+                            <div class="flex items-center justify-between transition duration-300 hover:text-[#FE696A]">
+                                <p class="text-sm">Password Recovery</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m10 17l5-5l-5-5v10z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Pages</p>
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Blog</p>
-                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Dos / Components</p>
+                <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Support</p>
             </div>
         </div>
-        <div class="bg-white hidden max-[878px]:flex flex-col gap-4 items-center px-[1rem] w-full">
+        <!-- responsive layout -->
+        <div class="bg-white hidden max-[878px]:flex flex-col gap-3 items-center px-[1rem] w-full" v-if="responsiveMenu == true">
             <div class="w-full relative">
                 <svg class="absolute left-[9px] top-[15px] text-gray-500" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16Zm0-2q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg>
                 <input type="search" placeholder="Search for products" class="p-3 px-9 w-full border outline-none rounded-md focus:border-[#FE696A] focus:shadow-md">
             </div>
-            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3 gap-1">
-                <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
-                <p class="font-semibold">Departments</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            <div class="w-full rounded-md bg-[#F6F9FC] p-3 pb-5 flex flex-col gap-8" @click="responsiveDepartment = !responsiveDepartment">
+                <div class="flex items-center gap-1" :class="responsiveDepartment == true && 'text-red-500'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
+                    <p class="font-semibold">Departments</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+                </div>
+                <div class="grid grid-cols-3 gap-4 max-[560px]:grid-cols-2 max-[378px]:grid-cols-1" v-if="responsiveDepartment == true">
+                    <Department heading="Clothing" :depImg="depImage" typeOne="Women's clothing" typeTwo="Men's clothing" />
+                    <Department heading="Shoes" :depImg="depImageTwo" typeOne="Women's shoes" typeTwo="Men's shoes" />
+                    <Department heading="Gadgets" :depImg="depImageThree" typeOne="Smartphones & Tablets" typeTwo="Wearable Gadgets" />
+                </div>
             </div>
-            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+            <div class="w-full rounded-md bg-[#F6F9FC] p-3">
                 <p class="font-semibold">Home</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
             </div>
-            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
-                <p class="font-semibold">Account</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+            <div class="w-full rounded-md bg-[#F6F9FC] p-3 flex flex-col gap-4">
+                <div class="flex items-center" @click="responsiveAccount = !responsiveAccount" :class="responsiveAccount == true && 'text-red-500'">
+                    <p class="font-semibold">Account</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+                </div>
+                <div class="text-sm flex flex-col gap-3" v-if="responsiveAccount == true">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center" @click="responsiveSubAccount = !responsiveSubAccount"  :class="responsiveSubAccount == true && 'text-red-500'">
+                            <p class="font-semibold">Shop user Account</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+                        </div>
+                        <div class="flex flex-col gap-3 text-gray-700 px-4" v-if="responsiveSubAccount == true">
+                            <p>Orders History</p>
+                            <p>Profile Settings</p>
+                            <p>Wishlist</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="flex items-center" @click="responsiveVendor = !responsiveVendor"  :class="responsiveVendor == true && 'text-red-500'">
+                            <p class="font-semibold">Vendor Dashboard</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
+                        </div>
+                        <div class="flex flex-col gap-3 text-gray-700 px-4" v-if="responsiveVendor == true">
+                            <p>Settings</p>
+                            <p>Purchases</p>
+                            <p>Favourites</p>
+                            <p>Sales</p>
+                            <p>Products</p>
+                            <p>Add new products</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Log out</p>
+                    </div>
+                </div>
             </div>
             <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
                 <p class="font-semibold">Blog</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
             </div>
             <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
-                <p class="font-semibold">Doscs/Component</p>
+                <p class="font-semibold">Support</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
             </div>
         </div>
     </div>
 </template>
 <style scoped>
-.cancel-cart , .departments{
+.cancel-cart , .departments , .accounts, .shop-user-account, .vendor{
     display: none;
 }
-.cart:hover .cancel-cart{
-    display: flex;
-}
-.department-menu:hover .departments{
+.cart:hover .cancel-cart ,.department-menu:hover .departments , .account-menu:hover .accounts , .shop-user-account-menu:hover .shop-user-account , .vendor-menu:hover .vendor{
     display: flex;
 }
 .body-cart{
