@@ -296,7 +296,7 @@ export default defineComponent({
                 <svg class="absolute left-[9px] top-[15px] text-gray-500" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.6 5.6q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275l-5.6-5.6q-.75.6-1.725.95T9.5 16Zm0-2q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg>
                 <input type="search" placeholder="Search for products" class="p-3 px-9 w-full border outline-none rounded-md focus:border-[#FE696A] focus:shadow-md">
             </div>
-            <div class="w-full rounded-md bg-[#F6F9FC] p-3 pb-5 flex flex-col gap-8" @click="responsiveDepartment = !responsiveDepartment">
+            <div class="w-full rounded-md bg-[#F6F9FC] cursor-pointer p-3 pb-5 flex flex-col gap-8" @click="responsiveDepartment = !responsiveDepartment">
                 <div class="flex items-center gap-1" :class="responsiveDepartment == true && 'text-red-500'">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
                     <p class="font-semibold">Departments</p>
@@ -308,10 +308,10 @@ export default defineComponent({
                     <Department heading="Gadgets" :depImg="depImageThree" typeOne="Smartphones & Tablets" typeTwo="Wearable Gadgets" />
                 </div>
             </div>
-            <div class="w-full rounded-md bg-[#F6F9FC] p-3">
+            <div class="w-full rounded-md bg-[#F6F9FC] p-3 cursor-pointer">
                 <p class="font-semibold">Home</p>
             </div>
-            <div class="w-full rounded-md bg-[#F6F9FC] p-3 flex flex-col gap-4">
+            <div class="w-full rounded-md bg-[#F6F9FC] p-3 flex flex-col gap-4 cursor-pointer">
                 <div class="flex items-center" @click="responsiveAccount = !responsiveAccount" :class="responsiveAccount == true && 'text-red-500'">
                     <p class="font-semibold">Account</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
@@ -347,11 +347,11 @@ export default defineComponent({
                     </div>
                 </div>
             </div>
-            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3 cursor-pointer">
                 <p class="font-semibold">Blog</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
             </div>
-            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3">
+            <div class="flex items-center w-full rounded-md bg-[#F6F9FC] p-3 cursor-pointer">
                 <p class="font-semibold">Support</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
             </div>

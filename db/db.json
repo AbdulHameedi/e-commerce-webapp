@@ -5,6 +5,18 @@
       "email": "bolu@gmail.com",
       "password": "bolu12345",
       "id": 1
+    },
+    {
+      "username": "Hammed Sanni",
+      "email": "hsanni507@gmail.com",
+      "password": "tyyyyy",
+      "id": 2
+    },
+    {
+      "username": "luqman",
+      "email": "luqman@gmail.com",
+      "password": "luqman123",
+      "id": 3
     }
   ]
 }
