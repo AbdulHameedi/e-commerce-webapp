@@ -61,7 +61,7 @@ export default defineComponent({
             this.validatePassword()
             this.validateConfirmPassword()
             if(this.validateName && this.validateEmail && this.validatePassword && this.validateConfirmPassword){
-                let result = await axios.post("http://localhost:3000/users" , {
+                let result = await axios.post("https://ecommerce-0hgp.onrender.com/users" , {
                     username: this.name,
                     email: this.email,
                     password: this.password

@@ -14,7 +14,7 @@ export default defineComponent({
     methods: {
         async submit(){
             let result = await axios.get(
-                `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+                `https://ecommerce-0hgp.onrender.com/users?email=${this.email}&password=${this.password}`
             )
             if(result.status == 200 && result.data.length > 0){
                 localStorage.setItem("user-info" , JSON.stringify(result.data[0]))
