@@ -15,8 +15,8 @@ export default defineComponent({
                 'We return money within 30 days'
             ],
             currentHeader: 0,
-            country: 'NG / N',
-            currency: 'NGN',
+            country: useProductStore().$state.country,
+            currency: useProductStore().$state.currency,
             showCurrency: false,
             showUsefulLink: false,
             depImage: '/../src/assets/women-attire.jpg',
@@ -51,7 +51,7 @@ export default defineComponent({
         }
     },
     watch: {
-        currency() {
+          currency() {
             if(this.currency == 'NGN'){
                 this.country = 'NG / N'
             }else if(this.currency == 'USD'){

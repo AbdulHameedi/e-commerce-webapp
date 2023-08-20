@@ -1,8 +1,13 @@
 <script>
 import { defineComponent } from 'vue'
+import useProductStore from '../stores/store';
 
 export default defineComponent({
-
+    data(){
+        return{
+            currency: useProductStore().$state.currency
+        }
+    }
 })
 </script>
 <template>
@@ -73,36 +78,40 @@ export default defineComponent({
             </div>
         </div>
     </div>
-    <div class="bg-[#2B3445] px-[4rem] w-full py-10">
-        <div class="grid grid-cols-4">
-            <div class="flex gap-3">
+    <div class="bg-[#2B3445] px-[4rem] w-full py-10 max-[1161px]:px-[1rem]">
+        <div class="grid grid-cols-4 border-b border-gray-500 pb-12 max-[635px]:grid-cols-1 max-[1161px]:grid-cols-2 max-[1161px]:gap-8">
+            <div class="flex gap-3 items-center">
                 <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="currentColor" d="M215.52 197.26a8 8 0 0 1-1.86 8.39l-24 24A8 8 0 0 1 184 232a7.09 7.09 0 0 1-.79 0a8 8 0 0 1-5.87-3.52l-44.07-66.12L112 183.59V208a8 8 0 0 1-2.34 5.65s-14 14.06-15.88 15.88a7.91 7.91 0 0 1-2.78 1.88a8 8 0 0 1-10.41-4.35l-.06-.15l-14.7-36.76L29 175.42a8 8 0 0 1-2.69-13.08l16-16A8 8 0 0 1 48 144h24.4l21.27-21.27l-66.11-44.08a8 8 0 0 1-1.22-12.32l24-24a8 8 0 0 1 8.39-1.86l85.94 31.25l31.53-31.53a28 28 0 0 1 39.6 39.6l-31.53 31.53Z"/></svg>
                 <div>
                     <p class="text-white font-semibold text-lg">Fast and free delivery</p>
                     <p class="text-sm text-gray-400 font-semibold text-[12px]">Free delivery for all orders over $200</p>
                 </div>
             </div>
-            <div class="flex gap-3">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="currentColor" d="M215.52 197.26a8 8 0 0 1-1.86 8.39l-24 24A8 8 0 0 1 184 232a7.09 7.09 0 0 1-.79 0a8 8 0 0 1-5.87-3.52l-44.07-66.12L112 183.59V208a8 8 0 0 1-2.34 5.65s-14 14.06-15.88 15.88a7.91 7.91 0 0 1-2.78 1.88a8 8 0 0 1-10.41-4.35l-.06-.15l-14.7-36.76L29 175.42a8 8 0 0 1-2.69-13.08l16-16A8 8 0 0 1 48 144h24.4l21.27-21.27l-66.11-44.08a8 8 0 0 1-1.22-12.32l24-24a8 8 0 0 1 8.39-1.86l85.94 31.25l31.53-31.53a28 28 0 0 1 39.6 39.6l-31.53 31.53Z"/></svg>
+            <div class="flex gap-3 items-center">
+                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12.005 22.003c-5.523 0-10-4.477-10-10s4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10Zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Zm-3.5-6h5.5a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1v-2h2v2h2.5v2h-5.5a.5.5 0 0 0 0 1h4a2.5 2.5 0 0 1 0 5h-1v2h-2v-2h-2.5v-2Z"/></svg>
                 <div>
                     <p class="text-white font-semibold text-lg">Money back guarantee</p>
                     <p class="text-sm text-gray-400 font-semibold text-[12px]">We return money within 30 days</p>
                 </div>
             </div>
-            <div class="flex gap-3">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="currentColor" d="M215.52 197.26a8 8 0 0 1-1.86 8.39l-24 24A8 8 0 0 1 184 232a7.09 7.09 0 0 1-.79 0a8 8 0 0 1-5.87-3.52l-44.07-66.12L112 183.59V208a8 8 0 0 1-2.34 5.65s-14 14.06-15.88 15.88a7.91 7.91 0 0 1-2.78 1.88a8 8 0 0 1-10.41-4.35l-.06-.15l-14.7-36.76L29 175.42a8 8 0 0 1-2.69-13.08l16-16A8 8 0 0 1 48 144h24.4l21.27-21.27l-66.11-44.08a8 8 0 0 1-1.22-12.32l24-24a8 8 0 0 1 8.39-1.86l85.94 31.25l31.53-31.53a28 28 0 0 1 39.6 39.6l-31.53 31.53Z"/></svg>
+            <div class="flex gap-3 items-center">
+                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><g fill="currentColor"><path d="M80 144v40a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16v-56h32a16 16 0 0 1 16 16Zm112-16a16 16 0 0 0-16 16v40a16 16 0 0 0 16 16h32v-72Z" opacity=".2"/><path d="M201.89 54.66A104.08 104.08 0 0 0 24 128v56a24 24 0 0 0 24 24h16a24 24 0 0 0 24-24v-40a24 24 0 0 0-24-24H40.36a88.12 88.12 0 0 1 150.18-54.07A87.39 87.39 0 0 1 215.65 120H192a24 24 0 0 0-24 24v40a24 24 0 0 0 24 24h24a24 24 0 0 1-24 24h-56a8 8 0 0 0 0 16h56a40 40 0 0 0 40-40v-80a103.41 103.41 0 0 0-30.11-73.34ZM64 136a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8v-48Zm128 56a8 8 0 0 1-8-8v-40a8 8 0 0 1 8-8h24v56Z"/></g></svg>
                 <div>
                     <p class="text-white font-semibold text-lg">24/7 customer support</p>
                     <p class="text-sm text-gray-400 font-semibold text-[12px]">Friendly 24/7 customer support</p>
                 </div>
             </div>
-            <div class="flex gap-3">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="currentColor" d="M215.52 197.26a8 8 0 0 1-1.86 8.39l-24 24A8 8 0 0 1 184 232a7.09 7.09 0 0 1-.79 0a8 8 0 0 1-5.87-3.52l-44.07-66.12L112 183.59V208a8 8 0 0 1-2.34 5.65s-14 14.06-15.88 15.88a7.91 7.91 0 0 1-2.78 1.88a8 8 0 0 1-10.41-4.35l-.06-.15l-14.7-36.76L29 175.42a8 8 0 0 1-2.69-13.08l16-16A8 8 0 0 1 48 144h24.4l21.27-21.27l-66.11-44.08a8 8 0 0 1-1.22-12.32l24-24a8 8 0 0 1 8.39-1.86l85.94 31.25l31.53-31.53a28 28 0 0 1 39.6 39.6l-31.53 31.53Z"/></svg>
+            <div class="flex gap-3 items-center">
+                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6v12q0 .825-.588 1.413T20 20H4q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6ZM4 8h16V6H4v2Zm0 4v6h16v-6H4Zm0 6V6v12Z"/></svg>
                 <div>
                     <p class="text-white font-semibold text-lg">Secure online payment</p>
                     <p class="text-sm text-gray-400 font-semibold text-[12px]">We possess SSL / Secure certificate</p>
                 </div>
             </div>
+        </div>
+        <div class="flex items-center justify-between">
+            <div></div>
+            <div></div>
         </div>
     </div>
 </template>
