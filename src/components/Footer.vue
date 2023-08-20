@@ -1,11 +1,18 @@
 <script>
 import { defineComponent } from 'vue'
+import Currency from './Currency.vue';
 import useProductStore from '../stores/store';
 
+
 export default defineComponent({
+    components: {
+        Currency
+    },
     data(){
         return{
-            currency: useProductStore().$state.currency
+            border: 'border rounded-md p-2 border-gray-500',
+            top: 'top-[-11.5rem]',
+            country: useProductStore().$state.country,
         }
     }
 })
@@ -109,8 +116,18 @@ export default defineComponent({
                 </div>
             </div>
         </div>
-        <div class="flex items-center justify-between">
-            <div></div>
+        <div class="flex items-center justify-between py-12">
+            <div>
+                <div class="flex items-center gap-8">
+                    <div class="text-white relative">
+                        <p class="font-semibold text-3xl">Cartzilla</p>
+                        <p class="absolute top-0 text-[10px] right-[-17px]">TM</p>
+                    </div>
+                    <div>
+                        <Currency :top="top" :border="border"/>
+                    </div>
+                </div>
+            </div>
             <div></div>
         </div>
     </div>
