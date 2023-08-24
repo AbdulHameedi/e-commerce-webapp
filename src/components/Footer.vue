@@ -18,117 +18,143 @@ export default defineComponent({
 })
 </script>
 <template>
-    <div class="px-[4rem] bg-[#373F50] w-full py-10 max-[979px]:px-[1rem]">
-        <div class="grid grid-cols-2 gap-4 max-[979px]:grid-cols-1">
-            <div class="flex justify-between gap-4 max-[617px]:flex-col">
-                <div>
-                    <p class="text-white font-semibold text-lg mb-4">Shop departments</p>
-                    <div class="flex flex-col gap-2 text-gray-400 font-semibold text-[14.1px]">
-                        <p>Sneakers & Athletic</p>
-                        <p>Athletic Apparel</p>
-                        <p>Sandals</p>
-                        <p>Jeans</p>
-                        <p>Shirts & Tops</p>
-                        <p>Shorts</p>
-                        <p>T-Shirts</p>
-                        <p>Swimwear</p>
-                        <p>Clogs & Mules</p>
-                        <p>Bags & Wallet</p>
-                        <p>Swimwear</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="mb-7">
-                        <p class="text-white font-semibold text-lg mb-4">Account & Shipping Info</p>
-                        <div class="flex flex-col gap-2 text-gray-400 font-semibold text-[14.1px]">
-                                <p>Sneakers & Athletic</p>
-                                <p>Athletic Apparel</p>
-                                <p>Sandals</p>
-                                <p>Jeans</p>
-                                <p>Shirts & Tops</p>
+    <div>
+        <div class="px-[4rem] bg-[#373F50] w-full py-10 max-[979px]:px-[1rem]">
+            <div class="grid grid-cols-2 gap-4 max-[979px]:grid-cols-1">
+                <div class="flex justify-between gap-4 max-[617px]:flex-col">
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-4">Shop departments</p>
+                        <div class="flex flex-col gap-2 text-gray-400 font-semibold text-[14.1px] cursor-pointer">
+                            <p>Sneakers & Athletic</p>
+                            <p>Athletic Apparel</p>
+                            <p>Sandals</p>
+                            <p>Jeans</p>
+                            <p>Shirts & Tops</p>
+                            <p>Shorts</p>
+                            <p>T-Shirts</p>
+                            <p>Swimwear</p>
+                            <p>Clogs & Mules</p>
+                            <p>Bags & Wallet</p>
+                            <p>Swimwear</p>
                         </div>
-                    </div>
-                        <div>
-                            <p class="text-white font-semibold text-lg mb-4">About us</p>
-                            <div class="flex flex-col gap-2 text-gray-400 font-semibold text-[14.1px]">
-                                <p>About company</p>
-                                <p>Our team</p>
-                                <p>Careers</p>
-                                <p>News</p>
-                            </div>
-                        </div>
-                </div>
-            </div>
-            <div class="justify-self-end max-[979px]:justify-self-auto">
-                <div class="mb-6">
-                    <p class="text-white font-semibold text-lg mb-4">Stay informed</p>
-                    <form>
-                        <div class="relative mb-2 flex">
-                            <input class="max-[979px]:w-full outline-none px-6 rounded-l-md py-3 pl-10" type="email" placeholder="Your email" name="" id="">
-                            <button type="submit" class="rounded-r-md bg-red-400 text-white px-6 py-3 hover:bg-red-500">Subscribe</button>
-                            <svg class="absolute top-3 left-3 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path fill="currentColor" d="m226.22 92.67l-96-64a4 4 0 0 0-4.44 0l-96 64A4 4 0 0 0 28 96v104a12 12 0 0 0 12 12h176a12 12 0 0 0 12-12V96a4 4 0 0 0-1.78-3.33ZM103.63 152L36 199.76v-96Zm8.19 4h32.36l68 48H43.86Zm40.55-4L220 103.76v96ZM128 36.81l89 59.3L144.17 148h-32.34L39.05 96.11Z"/></svg>
-                        </div>
-                    </form>
-                    <p class="text-gray-400 text-[12px] font-semibold max-w-sm">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</p>
-                </div>
-                <div>
-                    <p class="text-white font-semibold text-lg mb-4">Visit my portfolio</p>
-                    <a href="https://abdulhameedi.github.io/portfolio_june_23/" target="_blank">
-                    <div class="w-fit flex gap-2 text-white bg-[#2B3445] transition duration-500 hover:bg-[#212835] rounded-md p-2 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"/><path d="M9 20.027c-3 .973-5.5 0-7-3"/></g></svg>
-                        <div>
-                            <p class="text-[12px] text-gray-400 font-semibold">Visit on</p>
-                            <p>GitHub Pages</p>
-                        </div>
-                    </div></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-[#2B3445] px-[4rem] w-full py-10 max-[1161px]:px-[1rem]">
-        <div class="grid grid-cols-4 border-b border-gray-500 pb-12 max-[635px]:grid-cols-1 max-[1161px]:grid-cols-2 max-[1161px]:gap-8">
-            <div class="flex gap-3 items-center">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="currentColor" d="M215.52 197.26a8 8 0 0 1-1.86 8.39l-24 24A8 8 0 0 1 184 232a7.09 7.09 0 0 1-.79 0a8 8 0 0 1-5.87-3.52l-44.07-66.12L112 183.59V208a8 8 0 0 1-2.34 5.65s-14 14.06-15.88 15.88a7.91 7.91 0 0 1-2.78 1.88a8 8 0 0 1-10.41-4.35l-.06-.15l-14.7-36.76L29 175.42a8 8 0 0 1-2.69-13.08l16-16A8 8 0 0 1 48 144h24.4l21.27-21.27l-66.11-44.08a8 8 0 0 1-1.22-12.32l24-24a8 8 0 0 1 8.39-1.86l85.94 31.25l31.53-31.53a28 28 0 0 1 39.6 39.6l-31.53 31.53Z"/></svg>
-                <div>
-                    <p class="text-white font-semibold text-lg">Fast and free delivery</p>
-                    <p class="text-sm text-gray-400 font-semibold text-[12px]">Free delivery for all orders over $200</p>
-                </div>
-            </div>
-            <div class="flex gap-3 items-center">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12.005 22.003c-5.523 0-10-4.477-10-10s4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10Zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Zm-3.5-6h5.5a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1v-2h2v2h2.5v2h-5.5a.5.5 0 0 0 0 1h4a2.5 2.5 0 0 1 0 5h-1v2h-2v-2h-2.5v-2Z"/></svg>
-                <div>
-                    <p class="text-white font-semibold text-lg">Money back guarantee</p>
-                    <p class="text-sm text-gray-400 font-semibold text-[12px]">We return money within 30 days</p>
-                </div>
-            </div>
-            <div class="flex gap-3 items-center">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><g fill="currentColor"><path d="M80 144v40a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16v-56h32a16 16 0 0 1 16 16Zm112-16a16 16 0 0 0-16 16v40a16 16 0 0 0 16 16h32v-72Z" opacity=".2"/><path d="M201.89 54.66A104.08 104.08 0 0 0 24 128v56a24 24 0 0 0 24 24h16a24 24 0 0 0 24-24v-40a24 24 0 0 0-24-24H40.36a88.12 88.12 0 0 1 150.18-54.07A87.39 87.39 0 0 1 215.65 120H192a24 24 0 0 0-24 24v40a24 24 0 0 0 24 24h24a24 24 0 0 1-24 24h-56a8 8 0 0 0 0 16h56a40 40 0 0 0 40-40v-80a103.41 103.41 0 0 0-30.11-73.34ZM64 136a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8v-48Zm128 56a8 8 0 0 1-8-8v-40a8 8 0 0 1 8-8h24v56Z"/></g></svg>
-                <div>
-                    <p class="text-white font-semibold text-lg">24/7 customer support</p>
-                    <p class="text-sm text-gray-400 font-semibold text-[12px]">Friendly 24/7 customer support</p>
-                </div>
-            </div>
-            <div class="flex gap-3 items-center">
-                <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6v12q0 .825-.588 1.413T20 20H4q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6ZM4 8h16V6H4v2Zm0 4v6h16v-6H4Zm0 6V6v12Z"/></svg>
-                <div>
-                    <p class="text-white font-semibold text-lg">Secure online payment</p>
-                    <p class="text-sm text-gray-400 font-semibold text-[12px]">We possess SSL / Secure certificate</p>
-                </div>
-            </div>
-        </div>
-        <div class="flex items-center justify-between py-12">
-            <div>
-                <div class="flex items-center gap-8">
-                    <div class="text-white relative">
-                        <p class="font-semibold text-3xl">Cartzilla</p>
-                        <p class="absolute top-0 text-[10px] right-[-17px]">TM</p>
                     </div>
                     <div>
-                        <Currency :top="top" :border="border"/>
+                        <div class="mb-7">
+                            <p class="text-white font-semibold text-lg mb-4">Account & Shipping Info</p>
+                            <div class="flex flex-col gap-2 text-gray-400 font-semibold text-[14.1px] cursor-pointer">
+                                    <p>Sneakers & Athletic</p>
+                                    <p>Athletic Apparel</p>
+                                    <p>Sandals</p>
+                                    <p>Jeans</p>
+                                    <p>Shirts & Tops</p>
+                            </div>
+                        </div>
+                            <div>
+                                <p class="text-white font-semibold text-lg mb-4">About us</p>
+                                <div class="flex flex-col gap-2 text-gray-400 font-semibold text-[14.1px] cursor-pointer">
+                                    <p>About company</p>
+                                    <p>Our team</p>
+                                    <p>Careers</p>
+                                    <p>News</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="justify-self-end max-[979px]:justify-self-auto">
+                    <div class="mb-6">
+                        <p class="text-white font-semibold text-lg mb-4">Stay informed</p>
+                        <form>
+                            <div class="relative mb-2 flex">
+                                <input class="max-[979px]:w-full outline-none px-6 rounded-l-md py-3 pl-10" type="email" placeholder="Your email" name="" id="">
+                                <button type="submit" class="rounded-r-md bg-red-400 text-white px-6 py-3 hover:bg-red-500">Subscribe</button>
+                                <svg class="absolute top-3 left-3 text-gray-500" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path fill="currentColor" d="m226.22 92.67l-96-64a4 4 0 0 0-4.44 0l-96 64A4 4 0 0 0 28 96v104a12 12 0 0 0 12 12h176a12 12 0 0 0 12-12V96a4 4 0 0 0-1.78-3.33ZM103.63 152L36 199.76v-96Zm8.19 4h32.36l68 48H43.86Zm40.55-4L220 103.76v96ZM128 36.81l89 59.3L144.17 148h-32.34L39.05 96.11Z"/></svg>
+                            </div>
+                        </form>
+                        <p class="text-gray-400 text-[12px] font-semibold max-w-sm">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold text-lg mb-4">Visit my portfolio</p>
+                        <a href="https://abdulhameedi.github.io/portfolio_june_23/" target="_blank">
+                        <div class="w-fit flex gap-2 text-white bg-[#2B3445] transition duration-500 hover:bg-[#212835] rounded-md p-2 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M16 22.027v-2.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 0 0-1.5-3.75a5.07 5.07 0 0 0-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 0 0 5 5.797a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 0 0-.94 2.58v2.87"/><path d="M9 20.027c-3 .973-5.5 0-7-3"/></g></svg>
+                            <div>
+                                <p class="text-[12px] text-gray-400 font-semibold">Visit on</p>
+                                <p>GitHub Pages</p>
+                            </div>
+                        </div></a>
                     </div>
                 </div>
             </div>
-            <div></div>
+        </div>
+        <div class="bg-[#2B3445] px-[4rem] w-full py-10 max-[1161px]:px-[1rem]">
+            <div class="grid grid-cols-4 border-b border-gray-500 pb-12 max-[635px]:grid-cols-1 max-[1161px]:grid-cols-2 max-[1161px]:gap-8">
+                <div class="flex gap-3 items-center">
+                    <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><path fill="currentColor" d="M215.52 197.26a8 8 0 0 1-1.86 8.39l-24 24A8 8 0 0 1 184 232a7.09 7.09 0 0 1-.79 0a8 8 0 0 1-5.87-3.52l-44.07-66.12L112 183.59V208a8 8 0 0 1-2.34 5.65s-14 14.06-15.88 15.88a7.91 7.91 0 0 1-2.78 1.88a8 8 0 0 1-10.41-4.35l-.06-.15l-14.7-36.76L29 175.42a8 8 0 0 1-2.69-13.08l16-16A8 8 0 0 1 48 144h24.4l21.27-21.27l-66.11-44.08a8 8 0 0 1-1.22-12.32l24-24a8 8 0 0 1 8.39-1.86l85.94 31.25l31.53-31.53a28 28 0 0 1 39.6 39.6l-31.53 31.53Z"/></svg>
+                    <div>
+                        <p class="text-white font-semibold text-lg">Fast and free delivery</p>
+                        <p class="text-sm text-gray-400 font-semibold text-[12px]">Free delivery for all orders over $200</p>
+                    </div>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M12.005 22.003c-5.523 0-10-4.477-10-10s4.477-10 10-10s10 4.477 10 10s-4.477 10-10 10Zm0-2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Zm-3.5-6h5.5a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1v-2h2v2h2.5v2h-5.5a.5.5 0 0 0 0 1h4a2.5 2.5 0 0 1 0 5h-1v2h-2v-2h-2.5v-2Z"/></svg>
+                    <div>
+                        <p class="text-white font-semibold text-lg">Money back guarantee</p>
+                        <p class="text-sm text-gray-400 font-semibold text-[12px]">We return money within 30 days</p>
+                    </div>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256"><g fill="currentColor"><path d="M80 144v40a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16v-56h32a16 16 0 0 1 16 16Zm112-16a16 16 0 0 0-16 16v40a16 16 0 0 0 16 16h32v-72Z" opacity=".2"/><path d="M201.89 54.66A104.08 104.08 0 0 0 24 128v56a24 24 0 0 0 24 24h16a24 24 0 0 0 24-24v-40a24 24 0 0 0-24-24H40.36a88.12 88.12 0 0 1 150.18-54.07A87.39 87.39 0 0 1 215.65 120H192a24 24 0 0 0-24 24v40a24 24 0 0 0 24 24h24a24 24 0 0 1-24 24h-56a8 8 0 0 0 0 16h56a40 40 0 0 0 40-40v-80a103.41 103.41 0 0 0-30.11-73.34ZM64 136a8 8 0 0 1 8 8v40a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8v-48Zm128 56a8 8 0 0 1-8-8v-40a8 8 0 0 1 8-8h24v56Z"/></g></svg>
+                    <div>
+                        <p class="text-white font-semibold text-lg">24/7 customer support</p>
+                        <p class="text-sm text-gray-400 font-semibold text-[12px]">Friendly 24/7 customer support</p>
+                    </div>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <svg class="text-red-400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M22 6v12q0 .825-.588 1.413T20 20H4q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6ZM4 8h16V6H4v2Zm0 4v6h16v-6H4Zm0 6V6v12Z"/></svg>
+                    <div>
+                        <p class="text-white font-semibold text-lg">Secure online payment</p>
+                        <p class="text-sm text-gray-400 font-semibold text-[12px]">We possess SSL / Secure certificate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-between py-12 max-[1161px]:justify-center max-[1161px]:flex-col max-[1161px]:gap-8">
+                <div>
+                    <div class="flex items-center gap-8 mb-6 max-[1161px]:justify-center max-[315px]:flex-col max-[315px]:gap-4">
+                        <div class="text-white relative">
+                            <p class="font-semibold text-3xl">Cartzilla</p>
+                            <p class="absolute top-0 text-[10px] right-[-17px]">TM</p>
+                        </div>
+                        <div>
+                            <Currency :top="top" :border="border"/>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5 font-semibold text-sm cursor-pointer">
+                        <p class="text-gray-400 hover:text-gray-300">Outlets</p>
+                        <p class="max-[408px]:hidden text-gray-400 hover:text-gray-300">Affiliates</p>
+                        <p class="text-gray-400 hover:text-gray-300">Support</p>
+                        <p class="text-gray-400 hover:text-gray-300 max-[315px]:hidden">Privacy</p>
+                        <p class="text-gray-400 hover:text-gray-300">Terms of use</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <p class="transition duration-200 hover:bg-white hover:text-blue-500 bg-gray-700 text-white p-2 rounded-[4px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg></p>
+                        <p class="transition duration-200 hover:bg-white hover:text-blue-500 bg-gray-700 text-white p-2 rounded-[4px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256"><path fill="currentColor" d="M128 84a44 44 0 1 0 44 44a44.05 44.05 0 0 0-44-44Zm0 80a36 36 0 1 1 36-36a36 36 0 0 1-36 36Zm48-136H80a52.06 52.06 0 0 0-52 52v96a52.06 52.06 0 0 0 52 52h96a52.06 52.06 0 0 0 52-52V80a52.06 52.06 0 0 0-52-52Zm44 148a44.05 44.05 0 0 1-44 44H80a44.05 44.05 0 0 1-44-44V80a44.05 44.05 0 0 1 44-44h96a44.05 44.05 0 0 1 44 44ZM188 76a8 8 0 1 1-8-8a8 8 0 0 1 8 8Z"/></svg></p>
+                        <p class="transition duration-200 hover:bg-white hover:text-blue-500 bg-gray-700 text-white p-2 rounded-[4px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M15.12 5.32H17V2.14A26.11 26.11 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73Z"/></svg></p>
+                        <p class="transition duration-200 hover:bg-white hover:text-blue-500 bg-gray-700 text-white p-2 rounded-[4px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 8.999a5.419 5.419 0 0 0-2.565.645A1 1 0 0 0 14 8.999h-4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-5.5a1 1 0 1 1 2 0v5.5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-7.5a5.507 5.507 0 0 0-5.5-5.5Zm3.5 12h-2v-4.5a3 3 0 1 0-6 0v4.5h-2v-10h2v.703a1 1 0 0 0 1.781.625A3.483 3.483 0 0 1 21 14.5Zm-14-12H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1Zm-1 12H4v-10h2ZM5.015 1.542a3.233 3.233 0 1 0-.057 6.457h.028a3.233 3.233 0 1 0 .029-6.457Zm-.029 4.457h-.028a1.222 1.222 0 0 1-1.37-1.228c0-.747.56-1.229 1.427-1.229A1.234 1.234 0 0 1 6.41 4.771c0 .746-.56 1.228-1.425 1.228Z"/></svg></p>
+                        <p class="transition duration-200 hover:bg-white hover:text-blue-500 bg-gray-700 text-white p-2 rounded-[4px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M5.884 18.653c-.3-.2-.558-.456-.86-.816a50.59 50.59 0 0 1-.466-.579c-.463-.575-.755-.841-1.056-.95a1 1 0 1 1 .675-1.882c.752.27 1.261.735 1.947 1.588c-.094-.117.34.427.433.539c.19.227.33.365.44.438c.204.137.588.196 1.15.14c.024-.382.094-.753.202-1.096c-2.968-.725-4.648-2.64-4.648-6.396c0-1.238.37-2.355 1.058-3.291c-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.583c.081-.024.127-.034.208-.047c.803-.123 1.937.17 3.415 1.097a11.731 11.731 0 0 1 2.687-.308c.912 0 1.819.103 2.684.308c1.477-.933 2.614-1.227 3.422-1.097c.085.014.158.032.218.051a1 1 0 0 1 .616.58c.487 1.215.52 2.296.302 3.19c.691.936 1.058 2.045 1.058 3.292c0 3.758-1.674 5.666-4.642 6.393c.125.415.19.878.19 1.38c0 .664-.002 1.299-.007 2.01c0 .19-.002.394-.005.706a1 1 0 0 1-.018 1.957c-1.14.228-1.984-.532-1.984-1.524l.002-.447l.005-.705c.005-.707.008-1.338.008-1.997c0-.697-.184-1.152-.426-1.361c-.661-.57-.326-1.654.541-1.751c2.966-.334 4.336-1.483 4.336-4.66c0-.955-.312-1.745-.913-2.405a1 1 0 0 1-.189-1.044c.166-.415.236-.957.095-1.614l-.01.002c-.491.14-1.11.44-1.858.95a1 1 0 0 1-.833.135a9.626 9.626 0 0 0-2.592-.35c-.89 0-1.772.12-2.592.35a1 1 0 0 1-.829-.133c-.753-.507-1.374-.807-1.87-.947c-.143.653-.072 1.194.093 1.607a1 1 0 0 1-.189 1.044c-.597.656-.913 1.459-.913 2.404c0 3.172 1.371 4.33 4.322 4.66c.865.098 1.202 1.178.545 1.749c-.193.167-.43.732-.43 1.364v3.149c0 .986-.834 1.726-1.96 1.529a1 1 0 0 1-.04-1.963v-.99c-.91.062-1.661-.087-2.254-.484Z"/></svg></p>
+                    </div>
+                    <div class="flex items-center gap-3 justify-end">
+                        <p class="text-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M14.5 14h-13C.67 14 0 13.33 0 12.5v-9C0 2.67.67 2 1.5 2h13c.83 0 1.5.67 1.5 1.5v9c0 .83-.67 1.5-1.5 1.5ZM1.5 3c-.28 0-.5.22-.5.5v9c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-9c0-.28-.22-.5-.5-.5h-13Z"/><path fill="currentColor" d="M13.19 6.43h-.75c-.23 0-.4.07-.51.3l-1.44 3.28h1.02s.18-.44.21-.54h1.25c.04.12.12.53.12.53H14l-.81-3.56ZM12 8.73c.09-.21.39-1 .39-1c0 .02.09-.21.12-.33l.07.32l.23 1.04H12v-.02Zm-1.44.1c0 .74-.67 1.23-1.7 1.23c-.44 0-.86-.09-1.09-.19l.14-.81l.12.05c.32.14.53.19.91.19c.28 0 .58-.11.58-.35c0-.16-.12-.26-.51-.44c-.37-.18-.86-.46-.86-.96c0-.7.68-1.18 1.65-1.18c.37 0 .68.07.88.16l-.14.77l-.07-.07c-.18-.07-.4-.14-.74-.14c-.37.02-.54.18-.54.32c0 .16.21.28.54.44c.56.26.82.56.82.98ZM2 6.46l.02-.07h1.51c.21 0 .37.07.42.3l.33 1.58C3.95 7.43 3.17 6.74 2 6.46Z"/><path fill="currentColor" d="M6.4 6.43L4.87 9.99H3.83l-.88-2.98c.63.4 1.16 1.04 1.35 1.47l.11.37l.95-2.44H6.4v.02Zm.41-.02h.96l-.61 3.58H6.2l.61-3.58Z"/></svg></p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="41.17" height="32" viewBox="0 0 256 199"><path d="M46.54 198.011V184.84c0-5.05-3.074-8.342-8.343-8.342c-2.634 0-5.488.878-7.464 3.732c-1.536-2.415-3.731-3.732-7.024-3.732c-2.196 0-4.39.658-6.147 3.073v-2.634h-4.61v21.074h4.61v-11.635c0-3.731 1.976-5.488 5.05-5.488c3.072 0 4.61 1.976 4.61 5.488v11.635h4.61v-11.635c0-3.731 2.194-5.488 5.048-5.488c3.074 0 4.61 1.976 4.61 5.488v11.635h5.05Zm68.271-21.074h-7.463v-6.366h-4.61v6.366h-4.171v4.17h4.17v9.66c0 4.83 1.976 7.683 7.245 7.683c1.976 0 4.17-.658 5.708-1.536l-1.318-3.952c-1.317.878-2.853 1.098-3.951 1.098c-2.195 0-3.073-1.317-3.073-3.513v-9.44h7.463v-4.17Zm39.076-.44c-2.634 0-4.39 1.318-5.488 3.074v-2.634h-4.61v21.074h4.61v-11.854c0-3.512 1.536-5.488 4.39-5.488c.878 0 1.976.22 2.854.439l1.317-4.39c-.878-.22-2.195-.22-3.073-.22Zm-59.052 2.196c-2.196-1.537-5.269-2.195-8.562-2.195c-5.268 0-8.78 2.634-8.78 6.805c0 3.513 2.634 5.488 7.244 6.147l2.195.22c2.415.438 3.732 1.097 3.732 2.195c0 1.536-1.756 2.634-4.83 2.634c-3.073 0-5.488-1.098-7.025-2.195l-2.195 3.512c2.415 1.756 5.708 2.634 9 2.634c6.147 0 9.66-2.853 9.66-6.805c0-3.732-2.854-5.708-7.245-6.366l-2.195-.22c-1.976-.22-3.512-.658-3.512-1.975c0-1.537 1.536-2.415 3.951-2.415c2.635 0 5.269 1.097 6.586 1.756l1.976-3.732Zm122.495-2.195c-2.635 0-4.391 1.317-5.489 3.073v-2.634h-4.61v21.074h4.61v-11.854c0-3.512 1.537-5.488 4.39-5.488c.879 0 1.977.22 2.855.439l1.317-4.39c-.878-.22-2.195-.22-3.073-.22Zm-58.833 10.976c0 6.366 4.39 10.976 11.196 10.976c3.073 0 5.268-.658 7.463-2.414l-2.195-3.732c-1.756 1.317-3.512 1.975-5.488 1.975c-3.732 0-6.366-2.634-6.366-6.805c0-3.951 2.634-6.586 6.366-6.805c1.976 0 3.732.658 5.488 1.976l2.195-3.732c-2.195-1.757-4.39-2.415-7.463-2.415c-6.806 0-11.196 4.61-11.196 10.976Zm42.588 0v-10.537h-4.61v2.634c-1.537-1.975-3.732-3.073-6.586-3.073c-5.927 0-10.537 4.61-10.537 10.976c0 6.366 4.61 10.976 10.537 10.976c3.073 0 5.269-1.097 6.586-3.073v2.634h4.61v-10.537Zm-16.904 0c0-3.732 2.415-6.805 6.366-6.805c3.732 0 6.367 2.854 6.367 6.805c0 3.732-2.635 6.805-6.367 6.805c-3.951-.22-6.366-3.073-6.366-6.805Zm-55.1-10.976c-6.147 0-10.538 4.39-10.538 10.976c0 6.586 4.39 10.976 10.757 10.976c3.073 0 6.147-.878 8.562-2.853l-2.196-3.293c-1.756 1.317-3.951 2.195-6.146 2.195c-2.854 0-5.708-1.317-6.367-5.05h15.587v-1.755c.22-6.806-3.732-11.196-9.66-11.196Zm0 3.951c2.853 0 4.83 1.757 5.268 5.05h-10.976c.439-2.854 2.415-5.05 5.708-5.05Zm114.372 7.025v-18.879h-4.61v10.976c-1.537-1.975-3.732-3.073-6.586-3.073c-5.927 0-10.537 4.61-10.537 10.976c0 6.366 4.61 10.976 10.537 10.976c3.074 0 5.269-1.097 6.586-3.073v2.634h4.61v-10.537Zm-16.903 0c0-3.732 2.414-6.805 6.366-6.805c3.732 0 6.366 2.854 6.366 6.805c0 3.732-2.634 6.805-6.366 6.805c-3.952-.22-6.366-3.073-6.366-6.805Zm-154.107 0v-10.537h-4.61v2.634c-1.537-1.975-3.732-3.073-6.586-3.073c-5.927 0-10.537 4.61-10.537 10.976c0 6.366 4.61 10.976 10.537 10.976c3.074 0 5.269-1.097 6.586-3.073v2.634h4.61v-10.537Zm-17.123 0c0-3.732 2.415-6.805 6.366-6.805c3.732 0 6.367 2.854 6.367 6.805c0 3.732-2.635 6.805-6.367 6.805c-3.951-.22-6.366-3.073-6.366-6.805Z"/><path fill="#FF5F00" d="M93.298 16.903h69.15v124.251h-69.15z"/><path fill="#EB001B" d="M97.689 79.029c0-25.245 11.854-47.637 30.074-62.126C114.373 6.366 97.47 0 79.03 0C35.343 0 0 35.343 0 79.029c0 43.685 35.343 79.029 79.029 79.029c18.44 0 35.343-6.366 48.734-16.904c-18.22-14.269-30.074-36.88-30.074-62.125Z"/><path fill="#F79E1B" d="M255.746 79.029c0 43.685-35.343 79.029-79.029 79.029c-18.44 0-35.343-6.366-48.734-16.904c18.44-14.488 30.075-36.88 30.075-62.125c0-25.245-11.855-47.637-30.075-62.126C141.373 6.366 158.277 0 176.717 0c43.686 0 79.03 35.563 79.03 79.029Z"/></svg></p>
+                        <p class="text-orange-500"><svg xmlns="http://www.w3.org/2000/svg" width="36.58" height="32" viewBox="0 0 16 14"><path fill="currentColor" d="M14.5 13h-13C.67 13 0 12.33 0 11.5v-9C0 1.67.67 1 1.5 1h13c.83 0 1.5.67 1.5 1.5v9c0 .83-.67 1.5-1.5 1.5ZM1.5 2c-.28 0-.5.22-.5.5v9c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-9c0-.28-.22-.5-.5-.5h-13Z"/><path fill="currentColor" d="M9.37 6.99c0-.26-.1-.52-.29-.71c-.2-.2-.45-.29-.71-.29c-.56 0-1.01.44-1.01 1.01s.45 1.01 1.01 1.01S9.38 7.56 9.38 7Zm-2.2.44c-.15.15-.29.21-.44.21c-.36 0-.63-.27-.63-.66c0-.19.07-.35.19-.49c.11-.1.25-.17.41-.17c.17 0 .31.06.46.21v-.45a.93.93 0 0 0-.46-.12c-.25.02-.48.12-.66.27c-.05.05-.1.1-.14.16c-.13.17-.21.37-.21.6c0 .56.45.99 1.01.99h.02c.15 0 .29-.04.46-.12v-.45s0 .01-.01.02v-.02Zm3.47-1.18l-.44 1.08l-.5-1.28h-.41L10.08 8h.21l.83-1.95h-.41l-.08.2Zm.65.65v1.05h1.06v-.31h-.68v-.52h.66v-.33h-.66v-.41h.68v-.33h-1.06v.85Zm-8.75-.85H2v1.9h.54c.29 0 .5-.08.68-.21c.21-.17.35-.45.35-.74c0-.56-.41-.95-1.03-.95Zm.45 1.43c-.12.1-.27.15-.5.15h-.12V6.37h.1c.23 0 .39.04.5.15c.14.12.21.29.21.46a.58.58 0 0 1-.19.48Zm1.12-1.43h-.37v1.9h.37v-1.9Zm.93.74c-.23-.08-.29-.14-.29-.23c0-.12.12-.21.27-.21c.12 0 .21.04.31.15l.19-.25a.812.812 0 0 0-.56-.21c-.33 0-.6.23-.6.54c0 .27.12.39.46.52c.15.06.21.08.25.12c.08.04.12.12.12.19c0 .15-.12.27-.29.27s-.33-.1-.41-.25l-.23.23c.17.25.39.37.66.37c.39 0 .66-.25.66-.62c0-.33-.12-.46-.54-.62Zm8.36.36c.29-.06.45-.25.45-.54c0-.35-.25-.56-.68-.56h-.56v1.9h.37V7.2h.06l.52.75h.45l-.6-.79Zm-.31-.23h-.12v-.58h.12c.23 0 .37.1.37.29s-.14.29-.37.29Z"/></svg></p>
+                        <p class="bg-blue-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M16.015 14.378c0-.32-.135-.496-.344-.622c-.21-.12-.464-.135-.81-.135h-1.543v2.82h.675v-1.027h.72c.24 0 .39.024.478.125c.12.13.104.38.104.55v.35h.66v-.555c-.002-.25-.017-.376-.108-.516a.75.75 0 0 0-.33-.234l.02-.008a.784.784 0 0 0 .48-.747zm-.87.407l-.028-.002c-.09.053-.195.058-.33.058h-.81v-.63h.824c.12 0 .24 0 .33.05a.266.266 0 0 1 .15.255c0 .12-.045.215-.134.27zm5.152 1.052H19v.6h1.304c.676 0 1.05-.278 1.05-.884c0-.28-.066-.448-.187-.582c-.153-.133-.392-.193-.73-.207l-.376-.015c-.104 0-.18 0-.255-.03a.212.212 0 0 1-.15-.21c0-.09.017-.166.09-.21a.495.495 0 0 1 .272-.06h1.23v-.602h-1.35c-.704 0-.958.437-.958.84c0 .9.776.855 1.407.87c.104 0 .18.015.225.06c.046.03.082.106.082.18c0 .077-.035.15-.08.18c-.06.053-.15.07-.277.07zM0 0v10.096L.81 8.22h1.75l.225.464V8.22h2.043l.45 1.02l.437-1.013h6.502c.295 0 .56.057.756.236v-.23h1.787v.23c.307-.17.686-.23 1.12-.23h2.606l.24.466v-.466h1.918l.254.465v-.466h1.858v3.948H20.87l-.36-.6v.585h-2.353l-.256-.63h-.583l-.27.614h-1.213c-.48 0-.84-.104-1.08-.24v.24h-2.89v-.884c0-.12-.03-.12-.105-.135h-.105v1.036H6.067v-.48l-.21.48H4.69l-.202-.48v.465H2.235l-.256-.624H1.4l-.256.624H0V24h23.786v-7.108c-.27.135-.613.18-.973.18H21.09v-.255c-.21.165-.57.255-.914.255H14.71v-.9c0-.12-.018-.12-.12-.12h-.075v1.022h-1.8v-1.066c-.298.136-.643.15-.928.136h-.214v.915h-2.18l-.54-.617l-.57.6H4.742v-3.93h3.61l.518.602l.554-.6h2.412c.28 0 .74.03.942.225v-.24h2.177c.202 0 .644.045.903.225v-.24h3.265v.24c.163-.164.508-.24.803-.24h1.89v.24c.194-.15.464-.24.84-.24h1.176V0H0zm21.156 14.955c.004.005.006.012.01.016c.01.01.024.01.032.02l-.042-.035zm2.672-1.873h.065v.555h-.065zm.037 1.948v-.005c-.03-.025-.046-.048-.075-.07c-.15-.153-.39-.215-.764-.225l-.36-.012a.881.881 0 0 1-.27-.03a.212.212 0 0 1-.15-.21c0-.09.03-.16.09-.204c.076-.045.15-.05.27-.05h1.223v-.588h-1.283c-.69 0-.96.437-.96.84c0 .9.78.855 1.41.87c.104 0 .18.015.224.06c.046.03.076.106.076.18c0 .07-.034.138-.09.18c-.045.056-.136.07-.27.07h-1.288v.605h1.287c.42 0 .734-.118.9-.36h.03c.09-.134.135-.3.135-.523c0-.24-.045-.39-.135-.526zm-5.268-.822v-.583h-2.235v2.833h2.235v-.585h-1.57v-.57h1.533v-.584h-1.532v-.51M13.51 8.787h.685V11.6h-.684zm-.384.756l-.007.006c0-.314-.13-.5-.34-.624c-.217-.125-.47-.135-.81-.135H10.43v2.82h.674v-1.034h.72c.24 0 .39.03.487.12c.122.136.107.378.107.548v.354h.677v-.553c0-.25-.016-.375-.11-.516a.79.79 0 0 0-.33-.237c.172-.07.472-.3.472-.75zm-.855.396h-.015c-.09.054-.195.056-.33.056H11.1v-.623h.825c.12 0 .24.004.33.05c.09.04.15.128.15.25s-.047.22-.134.266zm3.649-.566h.632v-.6h-.644c-.464 0-.804.105-1.02.33c-.286.3-.362.69-.362 1.11c0 .512.123.833.36 1.074c.232.238.645.31.97.31h.78l.255-.627h1.39l.262.627h1.36v-2.11l1.272 2.11h.95l.002.002V8.786h-.684v1.963l-1.18-1.96h-1.02V11.4L18.11 8.744h-1.004l-.943 2.22h-.3c-.177 0-.362-.03-.468-.134c-.125-.15-.186-.36-.186-.662c0-.285.08-.51.194-.63c.133-.135.272-.165.516-.165zm1.668-.108l.464 1.118v.002h-.93l.466-1.12zM2.38 10.97l.254.628H4V9.393l.972 2.205h.584l.973-2.202l.015 2.202h.69v-2.81H6.118l-.807 1.904l-.876-1.905H3.343v2.663L2.205 8.787h-.997L.01 11.597h.72l.26-.626h1.39zm-.688-1.705l.46 1.118l-.003.002h-.915l.457-1.12zm10.164 4.355H9.714l-.85.923l-.825-.922H5.346v2.82H8l.855-.932l.824.93h1.302v-.94h.838c.6 0 1.17-.164 1.17-.945l-.006-.003c0-.78-.598-.93-1.128-.93zM7.67 15.853l-.014-.002H6.02v-.557h1.47v-.574H6.02v-.51H7.7l.733.82l-.764.824zm2.642.33l-1.03-1.147l1.03-1.108v2.253zm1.553-1.258h-.885v-.717h.885c.24 0 .42.098.42.344c0 .243-.15.372-.42.372zM9.967 9.373v-.586H7.73V11.6h2.237v-.58H8.4v-.564h1.527V9.88H8.4v-.507"/></svg></p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-[12px] text-gray-400 font-semibold max-[1161px]:text-center">
+                <p>&copy; All rights reserved. <a href="#">Made by Sanni Hammed</a></p>
+            </div>
         </div>
     </div>
 </template>
