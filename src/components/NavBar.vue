@@ -207,7 +207,7 @@ export default defineComponent({
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3a3 3 0 1 0 6 0a3 3 0 1 0-6 0"/></svg>
                     <p>Departments</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"/></svg>
-                    <div class="departments absolute shadow-xl bottom-[-18rem] bg-white p-6 w-[700px] gap-6 grid grid-cols-3">
+                    <div class="departments absolute shadow-xl bottom-[-17.5rem] bg-white p-6 w-[700px] gap-6 grid grid-cols-3 z-30">
                         <Department heading="Clothing" :depImg="depImage" typeOne="Women's clothing" typeTwo="Men's clothing" />
                         <Department heading="Shoes" :depImg="depImageTwo" typeOne="Women's shoes" typeTwo="Men's shoes" />
                         <Department heading="Gadgets" :depImg="depImageThree" typeOne="Smartphones & Tablets" typeTwo="Wearable Gadgets" />
@@ -218,7 +218,7 @@ export default defineComponent({
             <div class="flex items-center gap-6 text-gray-500">
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Home</p>
                 <p class="transition duration-300 cursor-pointer hover:text-[#FE696A]">Shop</p>
-                <div class="relative cursor-pointer">
+                <div class="relative cursor-pointer z-30">
                     <div class="account-menu">
                         <span class="transition duration-300 hover:text-[#FE696A]">Account</span>
                         <div class="accounts absolute bottom-[-9rem] flex flex-col gap-2 p-4 px-5  bg-white w-[220px] shadow-md">
