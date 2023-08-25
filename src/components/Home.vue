@@ -4,13 +4,15 @@ import NavBar from './NavBar.vue'
 import StickyMenu from './StickyMenu.vue'
 import Footer from './Footer.vue';
 import ScrollToTop from './ScrollToTop.vue';
+import HeroSection from './HeroSection.vue';
 
 export default defineComponent({
     components:{
         NavBar,
         StickyMenu,
         Footer,
-        ScrollToTop
+        ScrollToTop,
+        HeroSection
     },
     mounted(){
         let user = localStorage.getItem("user-info")
@@ -24,6 +26,7 @@ export default defineComponent({
     <a href="#to-top"><ScrollToTop /></a>
     <StickyMenu />
     <NavBar id="to-top"/>
+    <HeroSection />
     <Footer />
 </template>
 <style>
