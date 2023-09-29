@@ -5,6 +5,7 @@ import StickyMenu from './StickyMenu.vue'
 import Footer from './Footer.vue';
 import ScrollToTop from './ScrollToTop.vue';
 import HeroSection from './HeroSection.vue';
+import TrendingProduct from './TrendingProduct.vue';
 
 export default defineComponent({
     components:{
@@ -12,7 +13,8 @@ export default defineComponent({
         StickyMenu,
         Footer,
         ScrollToTop,
-        HeroSection
+        HeroSection,
+        TrendingProduct
     },
     mounted(){
         let user = localStorage.getItem("user-info")
@@ -27,6 +29,7 @@ export default defineComponent({
     <StickyMenu />
     <NavBar id="to-top"/>
     <HeroSection />
+    <TrendingProduct />
     <Footer />
 </template>
 <style>
